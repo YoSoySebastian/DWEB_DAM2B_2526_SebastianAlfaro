@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="nombre"></p>
+    <p id="apellido"></p>
+    <p id="numero"></p>
+    <p id="suma"></p>
+    <p id="resta"></p>
+    <p id="producto"></p>
+    <p id="cociente"></p>
+
+
+    <script>
+        let nombre = prompt("Introduce tu nombre:", "xxxxxxxxx");
+        let apellido = prompt("Introduce tu apellido:", "xxxxxxxxx");
+        let num1 = Number(prompt("Introduce el primer número:", "0"));
+        let num2 = Number(prompt("Introduce el segundo número:", "0"));
+
+        // Operaciones
+        let suma = num1 + num2;
+        let resta = num1 - num2;
+        let producto = num1 * num2;
+        let cociente = num1 / num2;
+
+        // Mostrar las lineas de texto
+        document.getElementById("nombre").innerText = "Nombre: " + nombre;
+        document.getElementById("apellido").innerText = "Apellido: " + apellido;
+        document.getElementById("numero").innerText = "Los números tecleados han sido: " + num1 + " y " + num2;
+        document.getElementById("suma").innerText = "Suma: " + suma;   
+        document.getElementById("resta").innerText = "Resta: " + resta;   
+        document.getElementById("producto").innerText = "Producto: " + producto;   
+        document.getElementById("cociente").innerText = "Cociente: " + cociente;   
+
+        // Para sacarlo por pantalla la ifnal
+        alert(
+        "Nombre: " + nombre + "\n" +
+        "Apellido: " + apellido + "\n" +
+        "Los números tecleados han sido: " + num1 + " y " + num2 + "\n" +
+        "Suma: " + suma + "\n" +
+        "Resta: " + resta + "\n" +
+        "Producto: " + producto + "\n" +
+        "Cociente: " + cociente
+        );
+
+    </script>
+    
+</body>
+</html>
