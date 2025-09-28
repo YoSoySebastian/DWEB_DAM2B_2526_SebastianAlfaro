@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tarea 7 - Sentencias de control (II)</h1>
+
+    <h2>Tabla de multiplicar del 7 (for)</h2>
+    <table id="tabla7"></table>
+
+    <h2>Tabla de sumar del 8 (while)</h2>
+    <table id="tabla8"></table>
+
+    <h2>Tabla de dividir del 9 (do..while)</h2>
+    <table id="tabla9"></table>
+
+        <script>
+            // Tabla de multiplicar del 7
+            let tabla7 = document.getElementById("tabla7");
+            for (let i = 1; i <= 10; i++) {
+                tabla7.innerHTML += "<tr><td>7 x " + i + "</td><td>" + (7 * i) + "</td></tr>";
+            }   
+
+            // Tabla de sumar del 8
+            const tabla8 = document.getElementById("tabla8");
+            let j = 1;
+            while (j <= 10) {
+                tabla8.innerHTML += "<tr><td>8 + " + j + "</td><td>" + (8 + j) + "</td></tr>";
+                j++;
+            }
+
+            // Tabla de dividir del 9
+            const tabla9 = document.getElementById("tabla9");
+            let k = 1;
+            do {
+                tabla9.innerHTML += "<tr><td>9 / " + k + "</td><td>" + (9 / k) + "</td></tr>";
+                k++;
+            } while (k <= 10);
+        </script>
+</body>
+</html>

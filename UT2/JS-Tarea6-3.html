@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("Números primos entre 1 y 100:<br><br>");
+
+        // Recorremos del 2 al 100, porque 1 no es número primo
+        for (let num = 2; num <= 100; num++) {
+            let esPrimo = true;
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                // Si encuentra un divisor, deja de comprobar
+                if (num % i === 0) {
+                esPrimo = false;
+                break;
+                }
+            }
+
+            if (esPrimo) {
+                document.write(num + " ");
+            }
+        }
+    </script>
+</body>
+</html>

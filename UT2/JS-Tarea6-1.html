@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Solicita los dos num
+        let num1 = parseFloat(prompt("Introduce el primer número:"));
+        let num2 = parseFloat(prompt("Introduce el segundo número:"));
+
+        // Saca por pantalla el resultado o respuesta dependiendo del caso con if
+        if (num1 > num2) {
+          alert(
+            "Suma: " + (num1 + num2) + "\n" +
+            "Resta: " + (num1 - num2) + "\n"
+          );
+        } else if (num1 === num2) {
+          alert(
+            "Los números son iguales"
+          );
+        } else {
+          alert(
+            "Multiplicación: " + (num1 * num2) + "\n" +
+            "División: " + (num1 / num2) + "\n"
+          );
+        }
+    </script>
+</body>
+</html>

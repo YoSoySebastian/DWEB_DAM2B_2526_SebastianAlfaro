@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let palabra = prompt("Ingrese alguna de estas palabras (casa, mesa, perro, gato) para traducirlas al ingles:");
+        let traduccion;
+
+        // Elige la traducción dependiendo de la palabra
+        switch (palabra) {
+        case "casa":
+            traduccion = "house";
+            break;
+        case "mesa":
+            traduccion = "table";
+            break;
+        case "perro":
+            traduccion = "dog";
+            break;
+        case "gato":
+            traduccion = "cat";
+            break;
+        default:
+            traduccion = "No vale";
+        }
+
+        document.write("Traducción: " + traduccion);
+    </script>
+</body>
+</html>
