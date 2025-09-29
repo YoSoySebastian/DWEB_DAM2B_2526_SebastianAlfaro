@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mayúsculas minúsculas o ambas</title>
+</head>
+<body>
+	<h1>Mayúsculas o minúsculas</h1>
+	<button onclick="MayusMinus()">Comprobar</button>
+	<p id="resultado"></p>
+<script>
+    function MayusMinus() {
+        let frase = prompt("Introduce una frase:", " ");
+        
+        let fraseMayus = frase.toUpperCase();
+        let fraseMinus = frase.toLowerCase();
+
+        let respuesta;
+
+        if (frase == fraseMayus) {
+            respuesta = "La frase esta formada solo por mayusculas"
+        } else if (frase == fraseMinus) {
+            respuesta = "La frase esta formada solo por minusculas"
+        } else {
+            respuesta = "La frase es una combinación de ambos"
+        }
+
+        document.getElementById("resultado").innerHTML = respuesta;
+    }
+</script>
+</body>
+</html>
