@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=z, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Resultados en la consola</h1>
+
+    <script>
+        // 11.1
+        let coche = {
+            puertas: 2,
+            ruedas: 4,
+            color: "azul"
+        }
+
+        console.log("Puertas: " + coche.puertas)
+        console.log("Ruedas: " + coche.ruedas);
+        console.log("Color: " + coche.color);
+
+        // 11.2
+            let persona = {nombre:"Juana", apellido:"Calamidad", edad:34}
+
+        for (let i in persona){
+            console.log(i + ": " + persona[i])
+        }
+
+        // 11.3
+        let persona2 = {nombre:"Juana", apellido:"Calamidad", edad:34}
+
+        persona2.nacionalidad = "Americana";
+
+        console.log(Object.values(persona2));   
+
+        console.log(Object.keys(persona2));   
+
+        console.log(Object.entries(persona2));
+        
+        // 11.5
+        let persona3 = {
+            nombre:"Camilo", 
+            edad:22, 
+            hablar:function(){
+                return "Hola soy " + persona3.nombre + " y tengo " + persona3.edad + " años";
+            }
+        }
+        
+        console.log(persona3.hablar());
+
+
+    </script>
+</body>
+</html>
