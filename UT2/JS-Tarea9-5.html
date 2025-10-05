@@ -1,35 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html><head>
+<meta content="text/html; charset=utf-8">
     <script>
-        let multipli = function(x,y){
-            return x*y;
+        function Saludo(personal,persona2) {
+        document .getElementById("salida").innerHTML = `Hola ${personal} y ${persona2}`;
         }
-
-        let expon = function (x,y){
-            return Math.pow(x, y);
-        }
-
-        let suma = (x,y) => {return x+y};
-
-        let resta = (x,y) => {return x-y};
-
-        var result = multipli(5,2);
-        alert (result);
-
-        result = suma(3,4);
-        alert (result);
-
-        result = resta(10,4);
-        alert (result);
-
-
     </script>
 </head>
 <body>
-    
+    <h1>Funcién con dos parametros</hl>
+    <p>Saluda a dos personas.</p></br>
+    <p id="salida">Aqui el resultado</p>
+
+    <script>
+        let nombre1 = prompt("Introduce el nombre de la primera persona:");
+        let nombre2 = prompt("Introduce el nombre de la segunda persona:");
+
+        Saludo(nombre1, nombre2);
+    </script>
 </body>
 </html>

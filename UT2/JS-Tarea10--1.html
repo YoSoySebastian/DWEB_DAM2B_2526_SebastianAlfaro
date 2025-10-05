@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="texto">Este es un párrafo.</p>
+<button onclick="agrandar()">Aumentar</button>
+<button onclick="reducir()">Reducir</button>
+
+<script>
+let tamaño = 16;
+function agrandar() {
+  tamaño += 2;
+  document.getElementById("texto").style.fontSize = tamaño + "px";
+}
+function reducir() {
+  tamaño -= 2;
+  document.getElementById("texto").style.fontSize = tamaño + "px";
+}
+</script>
+</body>
+</html>

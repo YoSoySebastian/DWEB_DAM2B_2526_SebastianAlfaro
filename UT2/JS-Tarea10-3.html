@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mayúsculas minúsculas o ambas</title>
+</head>
+<body>
+	<h1>Mayúsculas o minúsculas</h1>
+	<button onclick="MayusMinus()">Comprobar</button>
+	<p id="resultado"></p>
+<script>
+    function myFunction(a, b) {
+        return arguments.length;
+    }
+    
+    console.log(myFunction(6));
+    // El resultado es "1"
+
+    function myFunction(a, b) {
+    return arguments.length;
+    }
+    console.log(myFunction(6,5));
+    // El resultado es "2"
+
+    function myFun(a, b, ...manyMoreArgs) {
+    console.log("a", a);
+    console.log("b", b);
+    console.log("manyMoreArgs", manyMoreArgs);
+    }
+
+    myFun("one", "two", "three", "four", "five", "six");
+    // El resultado es
+    // a one
+    // b two
+    // manyMoreArgs [ 'three', 'four', 'five', 'six' ]  
+
+</script>
+</body>
+</html>
