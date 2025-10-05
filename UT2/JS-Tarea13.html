@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Personaje(primerNombre, edadAños, estadoCivil) {
+        this.primerNombre = primerNombre;
+        this.edadAños = edadAños;
+        this.estadoCivil = estadoCivil;
+        }
+
+        // Creando pj
+        let personaje1 = new Personaje("Aiden", 25, "Soltero");
+        let personaje2 = new Personaje("Luna", 22, "Casada");
+
+        // Ejer1.
+        console.log("Personaje 1:");
+        console.log("Nombre:", personaje1.primerNombre);
+        console.log("Edad:", personaje1.edadAños);
+        console.log("Estado civil:", personaje1.estadoCivil);
+
+        console.log("\nPersonaje 2:");
+        console.log("Nombre:", personaje2.primerNombre);
+        console.log("Edad:", personaje2.edadAños);
+        console.log("Estado civil:", personaje2.estadoCivil);
+
+        // Ejer2.
+        personaje2.nacionalidad = "Española";
+
+        console.log("\nComprobacion del metodo:");
+        console.log("Nacionalidad: ", personaje2.nacionalidad);
+
+        // Ejer3.
+        personaje2.infoTotal = function() {
+            return "Nombre: " + this.primerNombre +
+                    "\nEdad: " + this.edadAños +
+                    "\nEstado civil: " + this.estadoCivil +
+                    "\nNacionalidad: " + this.nacionalidad;
+        };
+
+        console.log("\nComprobacion del metodo:");
+        console.log(personaje2.infoTotal());
+
+    </script>
+</body>
+</html>
