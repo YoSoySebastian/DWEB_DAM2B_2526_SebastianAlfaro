@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        const salarios = [];
+
+        function Cargar(array){
+            for (let i = 0; i < 5; i++) {
+                const sueldo = Number(prompt(`Ingresa el salario del empleado ${i + 1}:`));
+                array[i] = sueldo;
+            }
+        }   
+
+        function calcularGastos(array){
+            let total = 0;
+            for (let i = 0; i < array.length; i++) {
+                total += array[i];
+            }
+            return total;
+        }
+
+        Cargar(salarios);
+
+        const totalSueldos = calcularGastos(salarios);
+
+        let resultado = "Salarios de los empleados:<br>";
+        for (let i = 0; i < salarios.length; i++) {
+            resultado += `Empleado ${i + 1}: $${salarios[i]}<br>`;
+        }
+        resultado += `<br>Total de sueldos: $${totalSueldos}`;
+
+        document.getElementById("demo").innerHTML = resultado;
+
+
+    </script>
+    
+</body>
+</html>
