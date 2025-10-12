@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const jugadores = [
+        { nombre: "Alex", puntuacion: 1200, rol: "Support" },
+        { nombre: "Bea", puntuacion: 1500, rol: "ADC" },
+        { nombre: "Carlos", puntuacion: 900, rol: "Jungler" },
+        { nombre: "Diana", puntuacion: 1700, rol: "Mid" }
+        ];
+
+        let suma = 0;
+        jugadores.forEach(jugador => {
+        suma += jugador.puntuacion;
+        });
+        
+        const promedio = suma / jugadores.length;
+        // El promedio que sale es: 1350
+
+        jugadores.forEach(jugador => {const reporte = jugador.puntuacion > promedio})
+    </script>
+    
+</body>
+</html>

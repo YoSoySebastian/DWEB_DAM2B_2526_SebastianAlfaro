@@ -8,24 +8,28 @@
 <body>
     <p id="demo"></p>
     <script>
-        const jugadores = [
-        { nombre: "Alex", puntuacion: 1200, rol: "Support" },
-        { nombre: "Bea", puntuacion: 1500, rol: "ADC" },
-        { nombre: "Carlos", puntuacion: 900, rol: "Jungler" },
-        { nombre: "Diana", puntuacion: 1700, rol: "Mid" }
+        const usuarios = [
+        { nombre: "Ana", actividad: 120, premium: true },
+        { nombre: "Luis", actividad: 50, premium: false },
+        { nombre: "Marta", actividad: 200, premium: true },
+        { nombre: "Jorge", actividad: 80, premium: false }
         ];
 
-        let suma = 0;
-        jugadores.forEach(jugador => {
-        suma += jugador.puntuacion;
+        const totalPuntos = usuarios.map(function(u){
+            return {
+                nombre: u.nombre,
+                puntos: u.premium ? u.actividad * 10 : u.actividad * 5 
+            };
         });
-        
-        const promedio = suma / jugadores.length;
-        // El promedio que sale es: 1350
 
-        jugadores.forEach(jugador => {const reporte = jugador.puntuacion > promedio})
+        console.log(totalPuntos);
+
+        const masPuntos = totalPuntos.filter(function(u){
+            return u.puntos > 1000;
+        });
+
+        console.log(masPuntos);
 
     </script>
-    
 </body>
 </html>

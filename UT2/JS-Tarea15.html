@@ -6,9 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="demo"></p>
+    <h1>Manejando Array´s</h1>
+        <p>Introduce un texto:</p>
+        <textarea id="demo" rows="5" cols="40"></textarea>
+        <button onclick="procesarTexto()">Pulsa</button>
     <script>
-        
+        function procesarTexto() {
+        let texto = document.getElementById("demo").value.trim();
+
+        if (texto === "") {
+            alert("Por favor, introduce un texto.");
+            return;
+        }
+
+        let palabras = texto.split(/\s+/);
+        let numPalabras = palabras.length;
+        let primera = palabras[0];
+        let ultima = palabras[palabras.length - 1];
+        let inverso = palabras.reverse();
+        let ordenAZ = palabras.slice().sort((a, b) => a.localeCompare(b));
+        let ordenZA = palabras.slice().sort((a, b) => b.localeCompare(a));
+
+        let nuevaVentana = window.open("", "Resultado", "width=400,height=400");
+        nuevaVentana.document.write("<h2>Resultados del texto:</h2>");
+        nuevaVentana.document.write("<p><b>Numero de palabras:</b> " + numPalabras + "</p>");
+        nuevaVentana.document.write("<p><b>Primera palabra:</b> " + primera + "</p>");
+        nuevaVentana.document.write("<p><b>Ultima palabra:</b> " + ultima + "</p>");
+        nuevaVentana.document.write("<p><b>Palabras en orden inverso:</b><br>" + inverso.join(" ") + "</p>");
+        nuevaVentana.document.write("<p><b>Palabras ordenadas A-Z:</b><br>" + ordenAZ.join(" ") + "</p>");
+        nuevaVentana.document.write("<p><b>Palabras ordenadas Z-A:</b><br>" + ordenZA.join(" ") + "</p>");
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const proyectos = [
+        { nombre: "App móvil", horasEstimadas: 120, horasReales: 150 },
+        { nombre: "Web corporativa", horasEstimadas: 80, horasReales: 75
+        },
+        { nombre: "API interna", horasEstimadas: 50, horasReales: 60 }
+        ];
+
+        const resultados = proyectos.map(function(p) {
+            const desviacion = (p.horasReales / p.horasEstimadas * 100 - 100);
+            return {
+                nombre: p.nombre,
+                desviacion: desviacion + "%"
+            }
+        })
+
+        console.log(resultados);
+    </script>
+</body>
+</html>
