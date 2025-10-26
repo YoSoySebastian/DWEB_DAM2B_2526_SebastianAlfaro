@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	<meta charset="UTF-8">
+	<title>Página dinámica con eventos</title>
+		<style>
+		body {
+			background-color: rgb(221, 221, 221);
+			text-align: center;
+			padding: 20px;
+		}
+		#caja {
+			background-color: pink;
+			padding: 40px;
+			border-radius: 15px;
+			display: inline-block;
+			transition: 0.5s;
+		}
+		input, select {
+			padding: 6px;
+		}
+		</style>
+	</head>
+	<body>	
+
+		<h1>Página</h1>
+			<div id="caja">
+				<p id="texto">Haz clic en el cuadro</p>
+			</div>
+
+		<br><br>
+
+		<input type="text" id="algo" placeholder="Di algo">
+		<select id="colorSelect">
+			<option value="">Selecciona un color</option>
+			<option value="blue">Azul</option>
+			<option value="green">Verde</option>
+		</select>
+
+		<p id="resultado"></p>
+
+		<script>
+			let caja = document.getElementById("caja");
+
+			caja.addEventListener("click", function() {
+				document.getElementById("texto").innerHTML = "Funciona!";
+			});
+
+			caja.addEventListener("mouseover", function() {
+				caja.style.backgroundColor = "red";
+			});
+
+			caja.addEventListener("mouseout", function() {
+				caja.style.backgroundColor = "pink";
+			});
+
+			caja.addEventListener("mousedown", function() {
+				document.getElementById("texto").innerHTML = "Presionando";
+			});
+
+			document.getElementById("colorSelect").addEventListener("change", function() {
+				document.body.style.backgroundColor = this.value;
+			});
+
+			document.getElementById("algo").addEventListener("focus", function() {
+				document.getElementById("resultado").innerHTML = "Escribiendo...";
+			});
+			
+			document.getElementById("algo").addEventListener("blur", function() {
+				document.getElementById("resultado").innerHTML = "Tu dijiste: " + this.value + "!";
+			});
+		</script>
+	</body>
+</html>

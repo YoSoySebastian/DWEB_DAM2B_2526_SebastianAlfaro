@@ -24,18 +24,20 @@
 
 	<a href="javascript:void(document.getElementById('enlaces').style.backgroundColor='White');">Color normal - 'white' -</a> <p>
 
-	<a href="javascript:void(document.getElementById('enlaces').onmouseover = function(){mouseOut()});">Cambia la fuente de esta sección a Comic Sans al situar el ratón encima de este vínculo - retorna a Verdana al situar el ratón fuera del vículo </a></br>
+	<a href="javascript:void(0);" onmouseover="mouseOver()" onmouseout="mouseOut()">
+       Cambia la fuente de esta sección a Comic Sans al situar el ratón encima de este vínculo - retorna a Verdana al situar el ratón fuera del vínculo
+    </a>	
 	</section>
 
     
     <script>
         function mouseOver() {
-            document.getElementById("enlaces").style.fontFamily = "Sans";
-        }
+        	document.getElementById("enlaces").style.fontFamily = "Comic Sans MS";
+		}
 
-        function mouseOut() {
-            document.getElementById("enlaces").style.fontFamily = "Verdana";
-        }
+		function mouseOut() {
+			document.getElementById("enlaces").style.fontFamily = "Verdana";
+		}
     </script>
 
 </body>
