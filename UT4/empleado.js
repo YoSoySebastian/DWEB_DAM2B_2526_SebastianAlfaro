@@ -16,6 +16,8 @@ var Empleado = /** @class */ (function () {
     return Empleado;
 }());
 exports.Empleado = Empleado;
-var empleado1 = new Empleado("Sebastian", 20, 1200);
-empleado1.informacion();
-empleado1.salarioAnual();
+/**
+ * let empleado1 = new Empleado("Sebastian", 20, 1200);
+ * empleado1.informacion();
+ * empleado1.salarioAnual();
+ */ 

@@ -16,7 +16,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Programador = void 0;
-var TS_Tarea1_1_1 = require("./TS-Tarea1-1");
+var empleado_1 = require("./empleado");
 var Programador = /** @class */ (function (_super) {
     __extends(Programador, _super);
     function Programador(nombre, edad, salario, lenguaje, proyectos) {
@@ -30,12 +30,14 @@ var Programador = /** @class */ (function (_super) {
         console.log("Lenguaje: ".concat(this.lenguaje, ", Proyectos: ").concat(this.proyectos));
     };
     Programador.prototype.bonus = function () {
-        var bonus = this.salarioAnual() * 0.08 * this.proyectos;
+        var bonus = this.salarioAnual() * 0.08 * this.proyectos - this.salarioAnual();
         return bonus;
     };
     return Programador;
-}(TS_Tarea1_1_1.Empleado));
+}(empleado_1.Empleado));
 exports.Programador = Programador;
-var programador1 = new Programador("Sebastian", 20, 1200, "TypeScript", 3);
-programador1.informacion();
-console.log("Bonus anual: ".concat(programador1.bonus()));
+/**
+ * let programador1 = new Programador("Sebastian", 20, 1200, "TypeScript", 3);
+ * programador1.informacion();
+ * console.log(`Bonus anual: ${programador1.bonus()}`);
+ */ 

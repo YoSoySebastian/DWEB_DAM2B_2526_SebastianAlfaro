@@ -1,4 +1,4 @@
-import { Empleado } from "./TS-Tarea1-1";
+import { Empleado } from "./empleado";
 
 export class Programador extends Empleado{
     lenguaje: string;
@@ -16,11 +16,13 @@ export class Programador extends Empleado{
     }
 
     bonus(): number{
-        let bonus = this.salarioAnual() * 0.08 * this.proyectos;
+        let bonus = this.salarioAnual() * 0.08 * this.proyectos - this.salarioAnual();
         return bonus;
     }
 }
 
-let programador1 = new Programador("Sebastian", 20, 1200, "TypeScript", 3);
-programador1.informacion();
-console.log(`Bonus anual: ${programador1.bonus()}`);
+/**
+ * let programador1 = new Programador("Sebastian", 20, 1200, "TypeScript", 3);
+ * programador1.informacion();
+ * console.log(`Bonus anual: ${programador1.bonus()}`);
+ */
