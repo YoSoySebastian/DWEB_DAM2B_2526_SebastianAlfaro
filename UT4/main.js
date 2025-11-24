@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var empleado_1 = require("./empleado");
+var programador_1 = require("./programador");
+var empresa_1 = require("./empresa");
+var empresa1 = new empresa_1.Empresa("TechCorp");
+var empleado1 = new empleado_1.Empleado("Persona1", 28, 1800);
+var empleado2 = new empleado_1.Empleado("Persona2", 30, 1500);
+var programador1 = new programador_1.Programador("Persona3", 30, 2000, "TypeScript", 3);
+var programador2 = new programador_1.Programador("Persona4", 27, 2200, "Java", 5);
+empresa1.agregarEmpleado(empleado1);
+empresa1.agregarEmpleado(empleado2);
+empresa1.agregarEmpleado(programador1);
+empresa1.agregarEmpleado(programador2);
+empresa1.mostrarEmpleados();
+console.log("Coste anual: ".concat(empresa1.costeAnual(), "\u20AC"));
