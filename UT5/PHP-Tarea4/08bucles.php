@@ -9,9 +9,9 @@
         echo "<tr>";
         for ($j=1; $j <= 2; $j++) { 
             if ($j == 1){
-                echo "<th>4 * ". $i."</th>";
+                echo "<td>4 * ". $i."</td>";
             } else {
-                echo "<th>". 4 * $i."</th>";
+                echo "<td>". 4 * $i."</td>";
             }
         }
         echo "</tr>";

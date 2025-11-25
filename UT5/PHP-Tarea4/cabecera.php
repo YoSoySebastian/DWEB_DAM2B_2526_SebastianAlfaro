@@ -4,7 +4,7 @@
     <!-- La cabecera del documento -->
     <head>
         <title>Ejercicios</title>
-        <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+        <link rel="stylesheet" href="css/estilo.css" />
 
     </head>
 
@@ -12,7 +12,7 @@
     <body>
     <div id="contenido">
         <div id="cabecera">
-            <h1>Ejemplos con PHP - Sentencias repetitivas</h1>
+            <h2>Ejemplos con PHP - Sentencias repetitivas</h2>
             <div id="menu">
             </div> <!-- fin de men�  -->     
             

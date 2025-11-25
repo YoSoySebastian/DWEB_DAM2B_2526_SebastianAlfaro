@@ -1,146 +1,156 @@
-/* Estilos para los elementos HTML*/
-body {
-    margin-top: 0;
-    background-color: rgb(128, 141, 159);
-    font-family: Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-}
-h1 {
-    font-size: 150%;
-    margin: 0;
-    padding: .5em 0 .25em;
-}
-h2 {
-    font-size: 120%;
-    margin: 0;
-    padding: .25em 0 .5em;
-}
-h1, h2  {
-    color: rgb(205, 163, 94);
-}
-h4 {
-    color: rgb(119, 75, 77);
-    padding: 2em;
+/* 
+    Document   : estilo
+    Created on : 26-jun-2011, 19:31:06
+    Author     : Montse
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
 }
 
-ul {
-    margin: 0 0 1em 0;
-    padding: 10px 0 0 2.5em;
-}
-li {
+html * {
     margin: 0;
     padding: 0;
 }
-
- 
-
-table {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-td, th {
-    border: 1px dashed black;
-    padding: .2em .5em .2em .5em;
-    vertical-align: top;
-    text-align: left;
-}
-form {
-    margin: 0;
-}
-br {
-    clear: left;
+body {
+    background-color: cadetblue;
+    font-family: "Arial";
+    margin: 10px;
 }
 
-/* estilos para las secciones div */
+h2, h3, h4 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: navy;
+}
 #contenido {
-    width: 760px;
-    margin: 20px auto;
-    background-color: white;
-    border: 1px solid rgb(119, 75, 77);
+    width: 800px;
+    background-color: bisque;
+    margin:0 auto;
+    padding: 15px;
+     
 }
+
+#principal {
+   
+   margin: 0;
+    padding: .5em 2em;
+    min-height: 500px;
+    
+}
+#principal a {
+    text-decoration: none;
+}
+#principal a:hover {
+    color: indigo;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+#principal table   {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#principal table  caption {
+    font-size: smaller;
+    font-weight: bold;
+}
+
+
+#principal table td {
+    border: 1px solid cadetblue;
+    padding: 5px;
+}
+#principal p {
+    margin-bottom: 5px;
+}
+#principal .sentencia {
+   font-style:  italic;
+   color: blue;
+}
+
 #cabecera {
-    margin: 0;
-    border-bottom: 2px solid rgb(119, 75, 77);
-    padding: .5em 2em;
-}
-#cabecera h1 {
-    margin: 0;
-    padding: .5em;
-    color: black;
-}
-#principal {
-    margin: 0;
-    padding: .5em 2em;
-    min-height: 400px;
-
+    margin-bottom: 50px;
+    background-color: slategrey;
+    margin:0 auto;
+    min-height: 40px;
+    
+    text-align: center;
+    font-family: "Georgia";
 }
 
- 
-
-#principal {
-    float: left;
-    width: 500px;
-    padding-bottom: 1.5em;
+#cabecera h2 {
+    color: bisque;
+    padding: 10px; 
 }
-
-#menu {
-    background-color: rgb(119, 75, 77);
-
-    padding: .2em 2em;
-}
-
-#menu a {
-    color: white;
-        text-decoration: none;
-}
-
-#menu a:hover {
-    color: rgb(128, 141, 159);
-}
-#menu ul {     
-    list-style-type: none;
-}
-
-#menu ul li {
-    display: inline;
-    padding-right: 1em;
-}
- 
 #pie {
-    clear: both;
-    margin-top: 1em;
-    padding-right: 1em;
-    border-top: 2px solid rgb(119, 75, 77);
+    
+    background-color: slategrey;
+    margin:0 auto;
+    min-height: 20px;
+    
+    text-align: center;
+    font-size: smaller;
+    font-family: "Palatyno";
 }
-#pie p {
-    text-align: right;
-    font-size: 80%;
-    margin: 1em 0;
-}
- 
-
-/********************************************************************
-* Estilos para el formulario
-********************************************************************/
 #form {
-    margin: .5em 0 2em;
+    padding: 1em;
 }
-#form label {
-    width: 6em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-    float: left;
+#form fieldset legend {
+    color: darkslateblue;
+    font-weight: bold;
+    font-size: large;
 }
-#form input {
-    float: left;
-    width: 15em;
-    border: 1px solid  rgb(119, 75, 77);
+#form fieldset {
+    padding: 1em; 
+    
 }
-#form input[text] {
-    width: 25em;
+form label {
+    width: 10em;
+}
+input[type='text'] {
+     width: 30%;
+     margin-bottom: 5px;
+}
+input[type='radio'], input[type='checkbox'] {
+     width: 30px;
+     margin-bottom: 5px;
 }
 
-#form  select {
-     float: left;
-    width: 15em;
+#form textarea {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#form select{
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.comen {
+    color: darkslateblue;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+        
+}
+#usuario {
+    width: 8em;
+    float: left;
+}
+
+tr.impar {
+    background-color: rgb(103, 202, 255);
+    color: rgb(0, 0, 0);
+}
+
+tr.par {
+    background-color: rgb(146, 255, 103);
+    color: rgb(0, 0, 0);
 }
